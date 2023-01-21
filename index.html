@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatima Kassem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="http://fonts.gstatic.com">
+    <link href="http://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=wap" rel="stylesheet">
+    <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="images/logo5.jpg" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="oils.html">oils</a></li>
+                    <li><a href="acrylics.html">Acrylics</a></li>
+                    <li><a href="sketch.html">sketches</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="text-box">
+                <h5>Fatima Kassem</h5>
+                <h1>“I dream my painting and I paint my dream.”</h1>
+                <a href="https://www.instagram.com/fatimakassem0/" class="hero-btn">check out</a>
+            </div>
+            
+            <div class="gallery-box">
+                <img src="images/IMG_20220528_143239.jpg" id="gallery">
+                <ul>
+                    <li class="btn active">01</li>
+                    <li class="btn">02</li>
+                    <li class="btn">03</li>
+                </ul>
+            </div>
+    </div>
+
+
+    <script>
+        var btn=document.getElementsByClassName("btn");
+        var gallery=document.getElementById("gallery");
+        var images=new Array(
+            "images/IMG_20220528_143239.jpg",
+            "images/IMG_20211004_175513.jpg",
+            "images/IMG_20221026_200924.jpg"
+        );
+
+
+        for(let i=0;i<btn.length;i++){
+            btn[i].onclick=function(){
+                gallery.src=images[i];
+                let current=document.getElementsByClassName("active");
+                current[0].className=current[0].className.replace("active","");
+                this.className+="active";
+            };
+        }
+    </script>
+    
+    </div>
+
+
+
+
+
+    <section class="footer">
+        <h4>About Me</h4>
+        <p>I'm a self taught artist that turns her imagination into reality.<br>
+           "I know nothing with any certainty, but the sight of the stars makes me dream."<br>
+           -Vincent Van Gogh
+        </p>
+        <div class="icons">
+        
+            <i  href="https://www.facebook.com/fatima.kassem.54922"class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+           
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> by Fatima Kassem</p>
+       
+    </section>
+
+    
+</body>
+</html>
